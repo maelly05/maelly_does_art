@@ -75,16 +75,26 @@ footer {
 <header>
 Lily's little shop 
 <p style="font-size: 0.5em;">The illusion of detail</p>
+<button onclick="voirPanier()">🛒 Panier</button>
 </header>
 
 <section class="gallery">
 
   <div class="art">
-    <img src="https://via.placeholder.com/300" alt="art1">
+  <a href="art1.html">
+    <img src="https://via.placeholder.com/300">
     <h3>Nostalgie</h3>
     <p>500$</p>
-    <button onclick="acheter()">Acheter</button>
-  </div>
+  </a>
+
+  <button onclick="ajouterAuPanier('Nostalgie', 500)">
+    Ajouter au panier
+  </button>
+
+  <button onclick="window.location.href='art1.html'">
+    Voir détails
+  </button>
+</div>
 
   <div class="art">
     <img src="https://via.placeholder.com/300" alt="art2">
@@ -108,10 +118,35 @@ Lily's little shop
 </footer>
 
 <script>
-function acheter() {
-  window.location.href = "https://paypal.me/TONLIEN";
+<script>
+
+let panier = [];
+
+function ajouterAuPanier(nom, prix) {
+  panier.push({ nom, prix });
+  alert(nom + " ajouté au panier 🛒");
 }
+
+function voirPanier() {
+  let total = 0;
+  let texte = "🛒 TON PANIER:\n\n";
+
+  panier.forEach(item => {
+    texte += item.nom + " - " + item.prix + "$\n";
+    total += item.prix;
+  });
+
+  texte += "\nTOTAL : " + total + "$";
+
+  alert(texte);
+}
+
+function paypal(prix) {
+  window.location.href = "https://paypal.me/TONLIEN/" + prix;
+}
+
 </script>
+
 
 </body>
 </html>
