@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon Univers Whimsical</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", cursive;
+  background: linear-gradient(to bottom, #ffe6f0, #e6f7ff);
+  color: #333;
+  text-align: center;
+}
+
+header {
+  padding: 30px;
+  font-size: 2em;
+  background: #ffb3d9;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.art {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 15px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.art:hover {
+  transform: scale(1.05);
+}
+
+.art img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+button {
+  background: #ff66b2;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #ff3385;
+}
+
+footer {
+  padding: 20px;
+  background: #ffd1e6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+✨ Mon Univers Whimsical ✨
+<p style="font-size: 0.5em;">Art magique & rêveur</p>
+</header>
+
+<section class="gallery">
+
+  <div class="art">
+    <img src="https://via.placeholder.com/300" alt="art1">
+    <h3>Rêve pastel</h3>
+    <p>50$</p>
+    <button onclick="acheter()">Acheter</button>
+  </div>
+
+  <div class="art">
+    <img src="https://via.placeholder.com/300" alt="art2">
+    <h3>Créature magique</h3>
+    <p>65$</p>
+    <button onclick="acheter()">Acheter</button>
+  </div>
+
+  <div class="art">
+    <img src="https://via.placeholder.com/300" alt="art3">
+    <h3>Forêt enchantée</h3>
+    <p>80$</p>
+    <button onclick="acheter()">Acheter</button>
+  </div>
+
+</section>
+
+<footer>
+<p>Contact : tonemail@email.com</p>
+<p>© 2026 Mon Art</p>
+</footer>
+
+<script>
+function acheter() {
+  window.location.href = "https://paypal.me/TONLIEN";
+}
+</script>
+
+</body>
+</html>
